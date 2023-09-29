@@ -53,9 +53,7 @@ class RepublishBag(Node):
 		# We use the first value readed by the visual odom to begin the dead-reckoning
 		
 		if(self.count == 0):
-
-			self.odom.pose.pose.position.x = 0.0
-			self.odom.pose.pose.position.y = 0.0
+			
 			self.odom.pose.pose.position.x = ros_odom.pose.pose.position.x
 			self.odom.pose.pose.position.y = ros_odom.pose.pose.position.y
 			# Warning: We fill the field z of the orientation (supposed to be in quaternion) with an euler angle
